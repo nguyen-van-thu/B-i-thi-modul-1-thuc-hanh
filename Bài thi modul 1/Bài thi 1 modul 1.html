@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài-thi-1-modul-1</title>
+</head>
+<body>
+<script>
+    let arr = [1, 2, 3, 4, 6, 7, 9, 11, 13,17,19]
+    function avg(arr) {
+        let number = 0;
+        let avg = 0;
+        let new_arr2 = [];
+        if (arr.length <= 50) {
+            for (let i = 0; i < arr.length; i++) {
+                if (i%2===0){
+                    if (arr[i] % 2 !== 0) {
+                        new_arr2.push(i);
+                        number = number + arr[i];
+                        avg = number / new_arr2.length;
+                    }
+                }
+            }
+            return avg;
+        }
+        else{
+            return 'số lớn hơn 50';
+        }
+    }
+    alert(`Tổng trung bình : ${avg(arr)}`);
+</script>
+</body>
+</html>
